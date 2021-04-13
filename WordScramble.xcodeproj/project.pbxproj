@@ -26,6 +26,7 @@
 		0993E63F26259A8E00DD2BA2 /* IntroducingListViews_Part1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroducingListViews_Part1.swift; sourceTree = "<group>"; };
 		0993E64326259C9300DD2BA2 /* IntroducingListViews_Part2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroducingListViews_Part2.swift; sourceTree = "<group>"; };
 		0993E6462625A20200DD2BA2 /* LoadingResources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingResources.swift; sourceTree = "<group>"; };
+		0993E6492626235A00DD2BA2 /* WorkingWithStrings.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = WorkingWithStrings.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +83,7 @@
 				0993E63F26259A8E00DD2BA2 /* IntroducingListViews_Part1.swift */,
 				0993E64326259C9300DD2BA2 /* IntroducingListViews_Part2.swift */,
 				0993E6462625A20200DD2BA2 /* LoadingResources.swift */,
+				0993E6492626235A00DD2BA2 /* WorkingWithStrings.playground */,
 			);
 			path = DAY29;
 			sourceTree = "<group>";
