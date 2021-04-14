@@ -14,6 +14,7 @@
 		0993E64026259A8E00DD2BA2 /* IntroducingListViews_Part1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0993E63F26259A8E00DD2BA2 /* IntroducingListViews_Part1.swift */; };
 		0993E64426259C9300DD2BA2 /* IntroducingListViews_Part2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0993E64326259C9300DD2BA2 /* IntroducingListViews_Part2.swift */; };
 		0993E6472625A20200DD2BA2 /* LoadingResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0993E6462625A20200DD2BA2 /* LoadingResources.swift */; };
+		0993E64C2626CF0E00DD2BA2 /* start.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0993E64B2626CF0C00DD2BA2 /* start.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		0993E64326259C9300DD2BA2 /* IntroducingListViews_Part2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroducingListViews_Part2.swift; sourceTree = "<group>"; };
 		0993E6462625A20200DD2BA2 /* LoadingResources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingResources.swift; sourceTree = "<group>"; };
 		0993E6492626235A00DD2BA2 /* WorkingWithStrings.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = WorkingWithStrings.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		0993E64B2626CF0C00DD2BA2 /* start.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = start.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				0993E62E2625974200DD2BA2 /* WordScrambleApp.swift */,
 				0993E6302625974200DD2BA2 /* ContentView.swift */,
 				0993E6322625974600DD2BA2 /* Assets.xcassets */,
+				0993E64B2626CF0C00DD2BA2 /* start.txt */,
 				0993E6372625974600DD2BA2 /* Info.plist */,
 				0993E6342625974600DD2BA2 /* Preview Content */,
 			);
@@ -146,6 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0993E6362625974600DD2BA2 /* Preview Assets.xcassets in Resources */,
+				0993E64C2626CF0E00DD2BA2 /* start.txt in Resources */,
 				0993E6332625974600DD2BA2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

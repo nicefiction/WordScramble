@@ -59,6 +59,7 @@ struct ContentView: View {
             // .navigationBarTitle(Text(rootWord))
             .navigationBarTitle(rootWord)
             .font(.title)
+            .onAppear(perform : startGame)
         }
     }
     
@@ -80,6 +81,35 @@ struct ContentView: View {
         // Set newWord back to be an empty string :
         newWord = ""
     }
+    
+    
+    func startGame() {
+        // STEP 1 • Find the URL for start.txt in our app bundle :
+        if
+            let _startURLFile = Bundle.main.url(forResource : "start" ,
+                                                withExtension : "txt") {
+            // STEP 2 • Load start.txt into a string :
+            if
+                let _startFileContents = try? String(contentsOf : _startURLFile) {
+                
+                // STEP 3 • Split the string up into an array of strings , splitting on line breaks :
+                let startWordsArray: [String] = _startFileContents.components(separatedBy: "\n")
+                
+                // STEP 4 • Pick one random word , or use "silkworm" as a sensible default :
+                rootWord = startWordsArray.randomElement() ?? "silkworm"
+                
+                // STEP 5A • If we are here everything has worked , so we can exit :
+                return
+            }
+        }
+        // STEP 5B • If were are *here* then there was a problem – trigger a crash and report the error :
+        fatalError("The words file of the game could not be loaded .")
+    }
+    /**
+     Now that we have a method to load everything for the game ,
+     we need to actually call that thing when our view is shown .
+     SwiftUI gives us a dedicated view modifier for running a closure when a view is shown — `onAppear()`.
+     */
 }
 
 
