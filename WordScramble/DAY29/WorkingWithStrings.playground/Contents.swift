@@ -109,7 +109,8 @@ let misspelledRange = textChecker.rangeOfMisspelledWord(in : word ,
  – i.e., if there was no spelling mistake because the string was spelled correctly –
  then we get back the special value `NSNotFound` .
  So , we could check our spelling result
- to see whether there was a mistake or not like this :
+ to see whether there was a mistake or not
+ like this :
  */
 
 let allGood = misspelledRange.location == NSNotFound // true
