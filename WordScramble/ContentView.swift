@@ -85,9 +85,8 @@ struct ContentView: View {
         else { return }
         
         guard checkIsReal(word : answer)
-        else { return createAlertWith(title : "I am sorry ." ,
-                                      message : "This is not a real world . Try another one .") }
-        
+        else { return createAlertWith(title : answer == rootWord ? "Nice try ." : "I am sorry ." ,
+                                      message : determineRealWordErrorMessage(with : answer)) }
         
         guard checkIsOriginal(word : answer)
         else { return createAlertWith(title : "I am sorry ." ,
@@ -180,7 +179,11 @@ struct ContentView: View {
                                                                 language : "en")
         
         // STEP 4 • Check our spelling result to see whether there was a mistake or not :
-        return misspelledRange.location == NSNotFound
+        // return misspelledRange.location == NSNotFound
+        
+        return word.count > 3 && word != rootWord
+            ? misspelledRange.location == NSNotFound
+            : false
     }
     
     
@@ -190,6 +193,21 @@ struct ContentView: View {
         isShowingAlert = true
         alertTitle = title
         alertMessage = message
+    }
+    
+    
+    func determineRealWordErrorMessage(with word: String)
+    -> String {
+        
+        if word.count < 3 {
+            return "Your word needs to be longer than three letters ."
+            
+        } else if word == rootWord {
+            return "Your word needs to be different from the challenge word ."
+            
+        } else {
+            return "This is not a real world . Try another one ."
+        }
     }
 }
 
