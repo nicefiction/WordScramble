@@ -21,6 +21,18 @@ struct ContentView: View {
      // //////////////////////////
     //  MARK: COMPUTED PROPERTIES
     
+    var gameScore: Int {
+        
+        var usedWordsScore = 0
+        
+        for usedWord in usedWords {
+            usedWordsScore += usedWord.count
+        }
+        
+        return usedWords.count > 0 ? usedWordsScore : 0
+    }
+    
+    
     var body: some View {
         
         NavigationView {
@@ -58,14 +70,18 @@ struct ContentView: View {
                         .font(.title)
                     Text(usedWord)
                 }
+                VStack(alignment: .center) {
+                    Text("Your Score")
+                        .font(.headline)
+                    Image(systemName: "\(gameScore).circle")
+                        .font(.system(size: 60))
+                        .padding()
+                }
             }
             // .navigationBarTitle(Text(rootWord))
             .navigationBarTitle(rootWord)
-            .navigationBarItems(trailing: Button(action: {
-                startGame()
-            }, label: {
-                Text("Next Word")
-            }))
+            .navigationBarItems(leading: Button("Next Word" , action : startGame) ,
+                                trailing : Button("New Game" , action : newGame ))
             .font(.title)
             .onAppear(perform : startGame)
             .alert(isPresented : $isShowingAlert) {
@@ -213,6 +229,13 @@ struct ContentView: View {
         } else {
             return "This is not a real world . Try another one ."
         }
+    }
+    
+    
+    func newGame() {
+        
+        usedWords = []
+        startGame()
     }
 }
 
