@@ -61,6 +61,11 @@ struct ContentView: View {
             }
             // .navigationBarTitle(Text(rootWord))
             .navigationBarTitle(rootWord)
+            .navigationBarItems(trailing: Button(action: {
+                startGame()
+            }, label: {
+                Text("Next Word")
+            }))
             .font(.title)
             .onAppear(perform : startGame)
             .alert(isPresented : $isShowingAlert) {
